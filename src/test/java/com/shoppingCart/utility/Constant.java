@@ -1,10 +1,14 @@
 package com.shoppingCart.utility;
 
+import java.util.UUID;
+
 public class Constant {
 	
-	public static final String URL = "https://www.phptravels.net/login";
+	
+	
+	public static final String URL = "http://automationpractice.com/index.php";
 	  
-    public static final String Username = "akshay.129.91@gmail.com";
+    public static final String Username = "@gmail.com";
 
     public static final String Password = "Akshay123";
     

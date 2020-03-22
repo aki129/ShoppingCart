@@ -1,5 +1,7 @@
 package com.shoppingCart.appModule;
 
+import java.util.UUID;
+
 import org.openqa.selenium.WebDriver;
 import com.shoppingCart.pageObjectClass.RegisterPage;
 import com.shoppingCart.utility.Constant;
@@ -7,13 +9,13 @@ import com.shoppingCart.utility.Constant;
 public class RegisterUser {
 	
 	
-
+	
 	public static void execute(WebDriver driver){
-		 
-		 
-        RegisterPage.btnSignIn(driver).click(); 
+		String uuid = UUID.randomUUID().toString(); 
+		uuid = uuid.substring(0, 10);
+        RegisterPage.btnCreate(driver).click(); 
         
-       RegisterPage.createAccountUsername(driver).sendKeys(Constant.Username);
+       RegisterPage.createAccountUsername(driver).sendKeys(uuid+Constant.Username);
  
        RegisterPage.btnCreateAccount(driver).click();
        
@@ -34,6 +36,10 @@ public class RegisterUser {
        RegisterPage.zipCode(driver).sendKeys(Constant.Zip);
       
        RegisterPage.phone(driver).sendKeys(Constant.Phn);
+       
+       RegisterPage.address1(driver).sendKeys(Constant.Address);
+       
+       RegisterPage.addressAlias(driver).clear();
        
        RegisterPage.addressAlias(driver).sendKeys(Constant.AddAlias);
        

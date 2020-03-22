@@ -10,9 +10,34 @@ public class RegisterPage {
 	  private static WebElement element = null;
 	  
 	  
-	  public static WebElement btnSignIn(WebDriver driver){
+	  public static WebElement btnCreate(WebDriver driver){
 
 	      element = driver.findElement(By.cssSelector("a.login"));
+
+	      return element;
+
+	      }
+	  
+	  public static WebElement signInEmail(WebDriver driver){
+
+	      element = driver.findElement(By.id("email"));
+
+	      return element;
+
+	      }
+	  
+	  public static WebElement signInPass(WebDriver driver){
+
+	      element = driver.findElement(By.id("passwd"));
+
+	      return element;
+
+	      }
+	  
+	  
+	  public static WebElement btnSignIn(WebDriver driver){
+
+	      element = driver.findElement(By.id("SubmitLogin"));
 
 	      return element;
 

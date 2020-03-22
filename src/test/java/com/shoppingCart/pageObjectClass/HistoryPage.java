@@ -2,16 +2,16 @@ package com.shoppingCart.pageObjectClass;
 
 import java.util.List;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import junit.framework.Assert;
+
 
 public class HistoryPage {
 	
 	
-	private static WebElement element = null;
 	
 	 public static boolean getOrderAmount(WebDriver driver,String amount){
 
@@ -26,6 +26,7 @@ public class HistoryPage {
                   
 				Assert.assertEquals("Amount in history class is different.", data.getText(), amount);
 				
+				break;
 			}
 			
 			
