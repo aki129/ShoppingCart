@@ -28,7 +28,7 @@ public class PageObjectModel {
 	  @BeforeClass
 	  public static void launchBrowser() {
 		  
-		  System.setProperty("webdriver.gecko.driver","c:\\Users\\A622793\\Project\\geckodriver-v0.26.0-win64\\geckodriver.exe");
+		  System.setProperty("webdriver.gecko.driver","Path for yor geckodriver exe files");
 			driver=new FirefoxDriver();
 			
 			log.info("Browser is launched");
