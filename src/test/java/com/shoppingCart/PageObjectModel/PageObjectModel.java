@@ -1,5 +1,6 @@
 package com.shoppingCart.PageObjectModel;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -20,7 +21,6 @@ import com.shoppingCart.appModule.SignInAction;
 import com.shoppingCart.pageObjectClass.HistoryPage;
 import com.shoppingCart.pageObjectClass.HomePage;
 import com.shoppingCart.utility.Constant;
-import com.worldline.msp.integration.test.msp.RobustRemoteWebDriver;
 
 
 
@@ -34,16 +34,18 @@ public class PageObjectModel {
 	  @BeforeClass
 	  public static void launchBrowser() throws MalformedURLException {
 		  
-//		  System.setProperty("webdriver.gecko.driver","G:\\Study\\geckodriver-v0.21.0-win64\\geckodriver.exe");
-	
+		  System.setProperty("webdriver.gecko.driver","src" + File.separator + "main" + File.separator + "resources" + File.separator +"geckodriver.exe");
+		     System.out.println(System.getProperty("webdriver.gecko.driver"));
 			DesiredCapabilities caps = new DesiredCapabilities();
 
 			caps.setCapability("name", "Selenium Test Example");
-			caps.setCapability("build", "1.0");
-			caps.setCapability("browser_api_name", "Edge20");
-			caps.setCapability("os_api_name", "Win10");
+			caps.setCapability("osVersion", "10");
+			caps.setCapability("browserName", "firefox");
+			caps.setCapability("browserVersion", "60");
+			caps.setCapability("os", "Windows");
+			
 			caps.setCapability("screen_resolution", "1024x768");
-			caps.setCapability("selenium_version", "2.53.1");
+			caps.setCapability("selenium_version", "3.11.0");
 
 //			 driver = new RemoteWebDriver(
 //					new URL("http://"), caps);
